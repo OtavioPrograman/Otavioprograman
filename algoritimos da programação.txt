@@ -1,0 +1,12 @@
+
+class HelloWorld {
+    public static void main(String[] args)
+System.out.printf("Informe se voce se encaixa nessa opçoes: ");
+System.out.printf("Voce e gestante? ");
+scanf("sim || nao");
+System.out.printf("Voce e idoso?" );
+scanf("sim || não");
+System.out.printf("Voce deficiente? "):
+scanf("sim || não"); 
+}
+
