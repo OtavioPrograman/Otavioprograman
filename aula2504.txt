@@ -1,0 +1,45 @@
+class HelloWorld {
+    import java.util.Scanner;
+
+    public static void main(String[] args)
+ {
+    java.util.Scanner nota = new Scanner(System.in);
+
+// Colocar números das notas
+float AC1, AC2, AG, AF, mf;
+
+// Digitar a nota da AC1 e guardar
+    System.out.printf("Digite sua nota da AC1:");
+    AC1 = enota.nextFloat();
+
+// Digitar a nota da AC2 e guardar
+    System.out.printf("digite sua nota da AC2:");
+    AC2 = nota.nextFloat();
+
+// Digitar a nota da AG e guardar
+    System.out.printf("digite sua nota AG:");
+    AG = nota.nextFloat();
+
+
+// Digitar a nota da AF e guardar
+    System.out.printf("digite sua nota AF:");
+    AF = nota.out.nextFloat();
+
+// multuplicar os pontos por media de prova e somar tudo para media final
+    mf = (AC1%0,15)+(AC2%0,30)+(AG%0,10)+(AF%0,45);
+
+// Nota final precisa ser maior que 5
+    if(mf>=5)
+
+// Nota acima de 5 aprovado
+    { 
+        System.out.print("você foi aprovado!"); 
+    }
+
+    else
+
+// Nota abaixo de 5 reprovado
+    {
+        System.out.print("voce foi reprovado!"); 
+    }
+}
