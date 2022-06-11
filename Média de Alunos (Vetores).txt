@@ -21,7 +21,7 @@ int sala6 = 8; // numeros de alunos por sala
 int Media = (sala1+sala2+sala3+sala4+sala5+sala6)/6; // calcular a media
 System.out.println("A media de alunos é: " + Media); // printando o valor
 
-System.out.println("A sala com mais alunos é: sala 4 com " + sala4);
+System.out.println("A sala com mais alunos é: sala 4 com " + sala4); // printando maior sala
 	}
 }
 
@@ -38,22 +38,22 @@ public class OtavioJava {
 int[] blocoQ = new int[6]; // numeros de salas
 int sala1, sala2, sala3, sala4, sala5, sala6; // numeros de alunos por sala
 
-System.out.println("Quantos alunos tem na sala 1? ");
+System.out.println("Quantos alunos tem na sala 1? "); // pedindo numero de alunos
 sala1 = input.nextInt();
-System.out.println("Quantos alunos tem nasa sala 2? ");
+System.out.println("Quantos alunos tem nasa sala 2? "); // pedindo numero de alunos
 sala2 = input.nextInt();
-System.out.println("Quantos alunos tem nasa sala 3? ");
+System.out.println("Quantos alunos tem nasa sala 3? "); // pedindo numero de alunos
 sala3 = input.nextInt();
-System.out.println("Quantos alunos tem nasa sala 4? ");
+System.out.println("Quantos alunos tem nasa sala 4? "); // pedindo numero de alunos
 sala4 = input.nextInt();
-System.out.println("Quantos alunos tem nasa sala 5? ");
+System.out.println("Quantos alunos tem nasa sala 5? "); // pedindo numero de alunos
 sala5 = input.nextInt();
-System.out.println("Quantos alunos tem nasa sala 6? ");
+System.out.println("Quantos alunos tem nasa sala 6? "); // pedindo numero de alunos
 sala6 = input.nextInt();
 
 int Media = (sala1+sala2+sala3+sala4+sala5+sala6)/6; // calcular a media
 System.out.println("A media de alunos é: " + Media); // printando o valor
 
-System.out.println("A sala com mais alunos é: sala 4 com " + sala4);
+System.out.println("A sala com mais alunos é: sala 4 com " + sala4); // printando maior sala
 	}
 }
