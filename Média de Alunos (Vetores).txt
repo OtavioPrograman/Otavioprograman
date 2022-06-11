@@ -1,0 +1,59 @@
+Média de Alunos (Vetores)
+
+1-
+
+package otavioAds;
+
+import java.util.Scanner;
+
+public class OtavioJava {
+
+	public static void main(String[] args) {
+		
+int[] blocoQ = new int[6]; // numeros de salas
+int sala1 = 5; // numeros de alunos por sala
+int sala2 = 4; // numeros de alunos por sala
+int sala3 = 7; // numeros de alunos por sala
+int sala4 = 9; // numeros de alunos por sala
+int sala5 = 6; // numeros de alunos por sala
+int sala6 = 8; // numeros de alunos por sala
+
+int Media = (sala1+sala2+sala3+sala4+sala5+sala6)/6; // calcular a media
+System.out.println("A media de alunos é: " + Media); // printando o valor
+
+System.out.println("A sala com mais alunos é: sala 4 com " + sala4);
+	}
+}
+
+2-
+
+import java.util.Scanner;
+
+public class OtavioJava {
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+int[] blocoQ = new int[6]; // numeros de salas
+int sala1, sala2, sala3, sala4, sala5, sala6; // numeros de alunos por sala
+
+System.out.println("Quantos alunos tem na sala 1? ");
+sala1 = input.nextInt();
+System.out.println("Quantos alunos tem nasa sala 2? ");
+sala2 = input.nextInt();
+System.out.println("Quantos alunos tem nasa sala 3? ");
+sala3 = input.nextInt();
+System.out.println("Quantos alunos tem nasa sala 4? ");
+sala4 = input.nextInt();
+System.out.println("Quantos alunos tem nasa sala 5? ");
+sala5 = input.nextInt();
+System.out.println("Quantos alunos tem nasa sala 6? ");
+sala6 = input.nextInt();
+
+int Media = (sala1+sala2+sala3+sala4+sala5+sala6)/6; // calcular a media
+System.out.println("A media de alunos é: " + Media); // printando o valor
+
+System.out.println("A sala com mais alunos é: sala 4 com " + sala4);
+	}
+}
