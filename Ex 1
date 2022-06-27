@@ -1,0 +1,37 @@
+    import java.util.Scanner;
+
+public class JavaApplication4 {
+
+    public static void main(String[] args) {
+        
+        int salaA21, salaA22, salaA23, salaA24, salaA25, salaA26, salaA27, salaA28; // números de salas
+        
+        System.out.println("quantos alunos tem na salaA21?" );
+        salaA21 = input.nextInt();
+        // numeros de alunos na sala
+        System.out.println("quantos alunos tem nasa salaA22?" );
+        salaA22 = input.nextInt();
+        // numeros de alunos na sala
+        System.out.println("quantos alunos tem nasa salaA23?" );
+        salaA23 = input.nextInt();
+        // numeros de alunos na sala
+        System.out.println("quantos alunos tem nasa salaA24?" );
+        salaA24 = input.nextInt();
+        // numeros de alunos na sala 
+        System.out.println("quantos alunos tem nasa salaA25?" );
+        salaA25 = input.nextInt();
+        // numeros de alunos na sala 
+        System.out.println("quantos alunos tem nasa salaA26?" );
+        salaA26 = input.nextInt();
+        // numeros de alunos na sala 
+        System.out.println("quantos alunos tem nasa salaA27?" );
+        salaA27 = input.nextInt();
+        // numeros de alunos na sala 
+        System.out.println("quantos alunos tem nasa salaA28?" );
+        salaA28 = input.nextInt();
+        // numeros de alunos na sala
+        
+        int maior valor > 10; // sala com mais alunos
+                int menor valor < 10; // sala com menos alunos
+                
+                System.out.println(" o maior valor é: " + maior valor);
