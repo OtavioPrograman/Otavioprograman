@@ -1,3 +1,5 @@
+package javaapplication4;
+
     import java.util.Scanner;
 
 public class JavaApplication4 {
@@ -5,6 +7,8 @@ public class JavaApplication4 {
     public static void main(String[] args) {
         
         int salaA21, salaA22, salaA23, salaA24, salaA25, salaA26, salaA27, salaA28; // números de salas
+        
+        int salaComMais > 0
         
         System.out.println("quantos alunos tem na salaA21?" );
         salaA21 = input.nextInt();
@@ -31,7 +35,8 @@ public class JavaApplication4 {
         salaA28 = input.nextInt();
         // numeros de alunos na sala
         
-        int maior valor > 10; // sala com mais alunos
-                int menor valor < 10; // sala com menos alunos
-                
-                System.out.println(" o maior valor é: " + maior valor);
+        System.out.print(" A sala com mais alunos é " + salaComMais );
+ 
+    }
+    
+}
