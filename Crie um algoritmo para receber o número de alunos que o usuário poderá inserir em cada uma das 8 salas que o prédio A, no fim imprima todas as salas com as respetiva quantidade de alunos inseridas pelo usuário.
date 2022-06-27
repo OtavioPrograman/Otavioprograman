@@ -35,8 +35,7 @@ public class JavaApplication4 {
         salaA28 = input.nextInt();
         // numeros de alunos na sala
         
-        System.out.print(" A sala com mais alunos é " + salaComMais );
+        System.out.print(" A sala com mais alunos é " + salaComMais ); // imputando sala mais mais alunos
  
-    }
-    
-}
+        int media = (salaA21+salaA22+salaA23+salaA24+salaA25+salaA26+salaA27+salaA28)/8; // Calculando a média
+        System.out.println("A media de alunos é: " + Media); // printando o valor
