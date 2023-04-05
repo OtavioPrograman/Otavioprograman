@@ -1,0 +1,207 @@
+//Lista 1 - POO - 222996
+
+-----------------------------------------------------------------------
+Atividade 1//
+
+public class Lista1POO {
+
+    public void setcpf(String cpf){
+    this.cpf = cpf;
+}
+public String getcpf(){
+    return cpf;
+}
+
+public String getnome() {
+    return nome;
+}
+
+public void setnome(String nome) {
+    this.nome = nome;
+}
+
+public char getsexo() {
+    return sexo;
+}
+
+public void setsexo(char sexo) {
+    this.sexo = sexo;
+}
+
+public int getidade() {
+    return idade;
+}
+
+public void setidade(int idade) {
+    this.idade = idade;
+}
+public String imprimir(){
+
+    return "CPF: "+cpf +
+            "Nome: "+nome +
+            "Sexo: "+sexo +
+            "Idade: "+idade;
+}
+
+//-----------------------------------------------------------------------
+ Atividade 2 //
+
+public class Lista1POO {
+
+    private String ra;
+    private String nome;
+    private float ac01;
+    private float ac02;
+    private float ag;
+    private float af;
+
+    public String getra() {
+        return ra;
+    }
+
+    public void setra(String ra) {
+        this.ra = ra;
+    }
+
+    public String getnome() {
+        return nome;
+    }
+
+    public void setnome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getac01() {
+        return ac01;
+    }
+
+    public void setac01(float ac01) {
+        this.ac01 = ac01;
+    }
+
+    public float getac02() {
+        return ac02;
+    }
+
+    public void setac02(float ac02) {
+        this.ac02 = ac02;
+    }
+
+    public float getag() {
+        return ag;
+    }
+
+    public void setag(float ag) {
+        this.ag = ag;
+    }
+
+    public float getaf() {
+        return af;
+    }
+
+    public void setaf(float af) {
+        this.af = af;
+    }
+
+    public String imprimir() {
+        float media = (ac01 + ac02 + ag + af) / 4;
+        String resultado = "ra: " + ra + "\nNome: " + nome + "\n";
+        resultado += "ac01: " + ac01 + "\nac02: " + ac02 + "\nag: " + ag + "\naf: " + af + "\n";
+        resultado += "media: " + media + " (" + (media >= 6 ? "Aprovado" : "Reprovado") + ")";
+        return resultado;
+    }
+}
+
+//-----------------------------------------------------------------------
+ Atividade 3 //
+
+public class Lista1POO {
+ 
+    private int cracha;
+    private String nome;
+    private char tipoVinculo;
+    private float valorHora;
+    private float quantidadedeHora;
+    private float salario;
+    private float valorDesconto;
+
+    public int getcracha() {
+        return cracha;
+    }
+
+    public void setcracha(int cracha) {
+        this.cracha = cracha;
+    }
+
+    public String getnome() {
+        return nome;
+    }
+
+    public void setnome(String nome) {
+        this.nome = nome;
+    }
+
+    public char gettipoVinculo() {
+        return tipovinculo;
+    }
+
+    public void settipoVinculo(char tipoVinculo) {
+        this.tipovinculo = tipovinculo;
+    }
+
+    public float getvalorhora() {
+        return valorhora;
+    }
+
+    public void setvalorHora(float valorHora) {
+        this.valorhora = valorhora;
+    }
+
+    public float getquantidadedehora() {
+        return quantidadedehora;
+    }
+
+    public void setquantidadedehora(float qtdeHora) {
+        this.quantidadedehora = quantidadedehora;
+    }
+
+    public float getsalario() {
+        return salario;
+    }
+
+    public void setsalario(float salario) {
+        this.salario = salario;
+    }
+
+    public float getvalorDesconto() {
+        return valorDesconto;
+    }
+
+    public void setvalordesconto(float valordesconto) {
+        this.valordesconto = valordesconto;
+    }
+
+    public float Calcularvalorsalario() {
+
+        if (tipovinculo == 'h') {
+
+            return (valorvora * quantidadedehora) - valordesconto;
+
+        } else {
+            return salario - valordesconto;
+        }
+
+    }
+
+    public String Imprimir() {
+
+        return "\nCracha: " + cracha
+                + "\nNome: " + nome
+                + "\nTipo Vinculo: " + tipoVinculo
+                + "\nSalario Bruto: " + salario + " R$"
+                + "\nDesconto: " + valorDesconto + " R$" 
+                + "\nSalario Liquido: "+CalcularValorSalario()+ " R$"
+                + "\n";
+    }
+
+}
