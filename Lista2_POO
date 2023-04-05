@@ -1,0 +1,107 @@
+    //Lista 2 - POO - 222996
+
+-----------------------------------------------------------------------
+//Atividade 1
+
+    public static void mostrar() {
+        System.out.println("Menu");
+        System.out.println("1 - Somar");
+        System.out.println("2 - Subtrair");
+        System.out.println("3 - Multiplicar");
+        System.out.println("4 - Dividir");
+        System.out.println("5 - Fechar");
+        System.out.printf("Digite a opcao: ");
+    }
+}
+
+public class OperacoesAritmeticas {
+    public int soma(int numero1, int numero2) {
+        return numero1 + numero2;
+    }
+
+    public double soma(double numero1, double numero2) {
+        return numero1 + numero2;
+    }
+
+    public int subtracao(int numero1, int numero2) {
+        return numero1 - numero2;
+    }
+
+    public double subtracao(double numero1, double numero2) {
+        return numero1 - numero2;
+    }
+
+    public int multiplicacao(int numero1, int numero2) {
+        return numero1 * numero2;
+    }
+
+    public double multiplicacao(double numero1, double numero2) {
+        return numero1 * numero2;
+    }
+
+    public int divisao(int numero1, int numero2) {
+        return numero1 / numero2;
+    }
+
+    public double divisao(double numero1, double numero2) {
+        return numero1 / numero2;
+    }
+}
+
+//-----------------------------------------------------------------------
+//Atividade 3
+
+public class Lista2POO {
+
+    private int codigo;
+    private String nome;
+    private double percentualComissao;
+
+    public Vendedor(int codigo, String nome, double percentualComissao) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.percentualComissao = percentualComissao;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPercentualComissao() {
+        return percentualComissao;
+    }
+
+    public void setPercentualComissao(double percentualComissao) {
+        this.percentualComissao = percentualComissao;
+    }
+
+    public double calcularPagamentoComissao(double valorVenda, double desconto) {
+        double pagamentoComissao = (valorVenda * percentualComissao) / 100;
+        pagamentoComissao = pagamentoComissao - desconto;
+        return pagamentoComissao;
+    }
+
+    public String imprimir(double valorVenda, double desconto) {
+        double pagamentoComissao = calcularPagamentoComissao(valorVenda, desconto);
+
+        String resultado = "\nCodigo: " + codigo + "\n"
+            + "Nome: " + nome + "\n"
+            + "Valor Venda: " + valorVenda +" R$" +"\n"
+            + "% Comissao: " + percentualComissao + "%"+"\n"
+            + "Desconto: " + desconto + " R$"+"\n"
+            + "Valor a Pagar: " + pagamentoComissao+" R$";
+        return resultado;
+    }
+}
