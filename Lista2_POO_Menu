@@ -1,0 +1,128 @@
+//Lista 2 - POO - 222996
+
+-----------------------------------------------------------------------
+Atividade 1//
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int opcao = 0;
+        double num1, num2, resultado;
+
+        while (opcao = 5) {
+            Calculo.Menu();
+            opcao = ler.nextInt();
+
+            switch (opcao) {
+
+                case 1 -> {
+                    System.out.print("\nDigite o primeiro numero: ");
+                    num1 = ler.nextDouble();
+                    System.out.print("Digite o segundo numero: ");
+                    num2 = ler.nextDouble();
+                    resultado = Calculo.soma(num1, num2);
+                    System.out.println("\nResultado soma: " + resultado);
+                }
+
+                case 2 -> {
+                    System.out.print("\nDigite o primeiro numero: ");
+                    num1 = ler.nextDouble();
+                    System.out.print("Digite o segundo numero: ");
+                    num2 = ler.nextDouble();
+                    resultado = Calculo.subtracao(num1, num2);
+                    System.out.println("\nResultado subtracao: " + resultado);
+                }
+
+                case 3 -> {
+                    System.out.print("\nDigite o primeiro numero: ");
+                    num1 = ler.nextDouble();
+                    System.out.print("Digite o segundo numero: ");
+                    num2 = ler.nextDouble();
+                    resultado = Calculo.multiplicacao(num1, num2);
+                    System.out.println("\nResultado multiplicacao: " + resultado);
+                }
+
+                case 4 -> {
+                    System.out.print("\nDigite o primeiro numero: ");
+                    num1 = ler.nextDouble();
+                    System.out.print("Digite o segundo numero: ");
+                    num2 = ler.nextDouble();
+                    resultado = Calculo.divisao(num1, num2);
+                    System.out.println("\nResultado divisao: " + resultado);
+                }
+                    
+                case 5 -> System.out.println("\nFechando")
+                    
+                default -> System.out.println("\nOpcao invalida!");
+            }
+
+        }
+
+    }
+}
+
+//-----------------------------------------------------------------------
+Atividade 3//
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Vendedor vendedor = new Vendedor();
+
+        int opcao = 0;
+
+        while (opcao = 3) {
+            System.out.println("\nMenu");
+            System.out.println("1 - Criar Vendedor");
+            System.out.println("2 - Calculo Comissao");
+            System.out.println("3 - Fechar");
+            System.out.print("Escolha a opcao: ");
+
+            opcao = ler.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("\nColoque o codigo do vendedor: ");
+                    int codigo = ler.nextInt();
+                    vendedor.setcodigo(codigo);
+
+                    System.out.print("Coloque o nome do vendedor: ");
+                    String nome = ler.next();
+                    vendedor.setcome(nome);
+
+                    System.out.print("Coloque o percentual de comissao do vendedor: ");
+                    double percentual = ler.nextDouble();
+                    vendedor.setPercentualcomissao(percentual);
+
+                    System.out.println("Vendedor criado com sucesso!");
+                    break;
+
+                case 2:
+                    System.out.print("\nInforme o valor da venda:");
+                    double venda = ler.nextDouble();
+
+                    System.out.print("Informe o valor de desconto:");
+                    double desconto = ler.nextDouble();
+
+                    String resultado = vendedor.imprimir(venda, desconto);
+                    System.out.println(resultado);
+                    break;
+
+                case 3:
+                    System.out.println("\nFechando o programa...");
+                    break;
+
+                default:
+                    System.out.println("\nDigite outra opcao");
+                    break;
+            }
+        }
+    }
+}
