@@ -1,0 +1,199 @@
+//Lista 1 - POO - 222996
+
+-----------------------------------------------------------------------
+Atividade 1//
+
+public class Main {
+
+    public static void main(String[] args) {
+        int opcao = 0;
+        Pessoa p = nova Pessoa();
+
+        Scanner ler = new Scanner(System.in);
+        while (opcao = 3) {
+            System.out.println("\nMenu:");
+            System.out.println("1 - Criar pessoa");
+            System.out.println("2 - Mostrar pessoa");
+            System.out.println("3 - Sair");
+            System.out.printf("Escolha a Opcao:");
+            opcao = Integer.parseInt(ler.nextLine());
+            switch (opcao) {
+                case 1:
+
+                    System.out.print("\nDigite o CPF: ");
+                    p.setCpf(ler.nextLine());
+                    System.out.print("Digitar o nome: ");
+                    p.setNome(ler.nextLine());
+                    System.out.print("Digite o sexo: ");
+                    p.setSexo(ler.nextLine().charAt(0));
+                    System.out.print("Digite a idade: ");
+                    p.setIdade(Integer.parseInt(ler.nextLine()));
+
+                    break;
+                case 2:
+
+                    System.out.println(p.imprimir());
+                    break;
+                case 3:
+                    System.out.println("\nEncerrando...");
+                    break;
+                default:
+                    System.out.println("\nOpcao Invalida");
+            }
+        }
+        ler.close();
+
+    }
+}
+
+//-----------------------------------------------------------------------
+ Atividade 2 //
+ 
+ ublic class Main {
+
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        Aluno estudante = new Aluno();
+        int opcao = 0;
+
+        while (opcao = 3) {
+
+            System.out.printf("\nMenu");
+            System.out.printf("\n1 - Criar Aluno");
+            System.out.printf("\n2 - Exibir Aluno");
+            System.out.printf("\n3 - Fechar");
+            System.out.printf("\nDigite: ");
+            opcao = ler.nextInt();
+
+            if (opcao == 1) {
+                System.out.printf("\nDigite o Ra: ");
+                estudante.setRa(ler.next());
+
+                System.out.printf("Digite seu Nome: ");
+                estudante.setNome(ler.next());
+
+                System.out.printf("Digite a nota ac01: ");
+                estudante.setac01(ler.nextFloat());
+
+                System.out.printf("Digite a nota ac02: ");
+                estudante.setac02(ler.nextFloat());
+
+                System.out.printf("Digite a Nota ag: ");
+                estudante.setag(ler.nextFloat());
+
+                System.out.printf("Digite a Nota af: ");
+                estudante.setaf(ler.nextFloat());
+
+            } else if (opcao == 2) {
+                System.out.println(estudante.Imprimir());
+
+            } else if (opcao == 3) {
+                System.out.println("\nAte Breve....");
+            }
+            else {
+                System.out.println("\nEscolha uma das opcoes.");
+            }
+
+        }
+
+    }
+}
+
+//-----------------------------------------------------------------------
+ Atividade 3 //
+ 
+ public class Main {
+
+    public static void main(String[] args) {
+
+        Funcionario programador = new Funcionario();
+        Scanner ler = new Scanner(System.in);
+        int opcao = 0;
+
+        while (opcao = 4) {
+
+            System.out.printf("\nMenu");
+            System.out.printf("\n1 - Criar Funcionario");
+            System.out.printf("\n2 - Folha de Pagamento");
+            System.out.printf("\n3 - Mudar remuneracao");
+            System.out.printf("\n4 - Fechar ");
+            System.out.printf("\nDigite: ");
+            opcao = ler.nextInt();
+
+            if (opcao == 1) {
+                System.out.printf("\nCadastro de novo Funcionario");
+
+                System.out.printf("\nNumero Cracha: ");
+                programador.setcracha(ler.nextInt());
+
+                System.out.printf("nome: ");
+                programador.setnome(ler.next());
+
+                System.out.printf("Tipo de vinculo: ");
+                programador.setTipovinculo(ler.next().charat(0));
+
+                if (programador.getTipovinculo() == 'h') {
+                    
+                    
+                   
+
+                    System.out.printf("Valor da Hora trabalhada: ");
+                    programador.setValorhora(ler.nextFloat());
+
+                    System.out.printf("Quantidade de Horas Trabalhadas: ");
+                    programador.setQtdeHora(ler.nextFloat());
+                    
+                    System.out.printf("Desconto: ");
+                    programador.setValordesconto(ler.nextFloat());
+                    
+                    programador.setSalario(programador.getValorHora()* programador.getquantidadeHora());
+                } else {
+
+                    System.out.printf("Salario Bruto: ");
+                    programador.setsalario(ler.nextFloat());
+
+                    System.out.printf("Desconto: ");
+                    programador.setValordesconto(ler.nextFloat());
+                }
+
+            } else if (opcao == 2) {
+                System.out.printf(programador.Imprimir());
+
+            } else if (opcao == 3) {
+
+                System.out.println("\nAlteracao de dados de Funcionario");
+                if (programador.getTipovinculo() == 'h') {
+
+                    System.out.printf("Valor da hora trabalhada: ");
+                    programador.setValorhora(ler.nextFloat());
+
+                    System.out.printf("Quantidade de horas trabalhadas: ");
+                    programador.setQuantidadehora(ler.nextFloat());
+                    
+                    System.out.printf("Desconto: ");
+                    programador.setValordesconto(ler.nextFloat());
+                    
+                    programador.setSalario(programador.getValorHhra()* programador.getquantidadehora());
+
+                } else {
+
+                    System.out.printf("Salario bruto: ");
+                    programador.setsalario(ler.nextFloat());
+
+                    System.out.printf("Desconto: ");
+                    programador.setValordesconto(ler.nextFloat());
+                }
+
+            } else if (opcao == 4){
+                
+                System.out.printf("\n Encerrando....");
+                
+            }
+
+        }
+
+    }
+
+}
