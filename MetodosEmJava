@@ -1,0 +1,39 @@
+//Faça uma função que receba o CPF e informe se é valido ou invalido//
+
+def valida_cpf(cpf):
+    # Remove pontos e traços do CPF e verifica se o CPF tem 11 dígitos e se todos são números
+    cpf = cpf.replace(".", "").replace("-", "")
+    if len(cpf) != 11 or not cpf.isdigit():
+        return False
+    
+    # Calcula o primeiro dígito verificador
+    peso = [10, 9, 8, 7, 6, 5, 4, 3, 2] # Define os pesos de cada dígito do CPF
+    soma = 0
+    for i in range(9):
+        soma += int(cpf[i]) * peso[i] # Multiplica o i-ésimo dígito do CPF pelo i-ésimo peso e soma ao total
+        
+    resto = soma % 11 # Calcula o resto da divisão por 11
+    if resto < 2: # Se o resto for menor que 2, o primeiro dígito verificador é zero
+        digito1 = 0
+    else: # Caso contrário, o primeiro dígito verificador é 11 menos o resto
+        digito1 = 11 - resto
+    
+    if int(cpf[9]) != digito1: # Verifica se o primeiro dígito verificador é igual ao décimo dígito do CPF
+        return False
+    
+    # Calcula o segundo dígito verificador
+    peso = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2] # Define os pesos de cada dígito do CPF
+    soma = 0
+    for i in range(10):
+        soma += int(cpf[i]) * peso[i] # Multiplica o i-ésimo dígito do CPF pelo i-ésimo peso e soma ao total
+        
+    resto = soma % 11 # Calcula o resto da divisão por 11
+    if resto < 2: # Se o resto for menor que 2, o segundo dígito verificador é zero
+        digito2 = 0
+    else: # Caso contrário, o segundo dígito verificador é 11 menos o resto
+        digito2 = 11 - resto
+        
+    if int(cpf[10]) != digito2: # Verifica se o segundo dígito verificador é igual ao décimo primeiro dígito do CPF
+        return False
+        
+    return True # Se todos os testes passarem, o CPF é válido e a função retorna True
