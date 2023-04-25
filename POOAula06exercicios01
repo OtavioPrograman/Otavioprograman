@@ -1,0 +1,165 @@
+package javaapplication13;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import classes.*;
+
+public class JavaApplication13 {
+
+    private static ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+    private static Scanner input = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
+        
+        do {
+            System.out.println("Menu:");
+            System.out.println("1 – Criar Pessoa");
+            System.out.println("2 – Criar Automóvel");
+            System.out.println("3 – Transferir Automóvel");
+            System.out.println("4 – Mostrar Todas as Pessoas");
+            System.out.println("5 – Mostrar Automóveis da Pessoa");
+            System.out.println("6 – Sair");
+            
+            opcao = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            switch (opcao) {
+                case 1:
+                    System.out.println("Digite o código da pessoa:");
+                    int codigo = scanner.nextInt();
+                    scanner.nextLine(); 
+                    System.out.println("Digite o nome da pessoa:");
+                    String nome = scanner.nextLine();
+                    Pessoa pessoa = new Pessoa(codigo, nome);
+                    pessoas.add(pessoa);
+                    System.out.println("Pessoa criada com sucesso!");
+                    break;
+                case 2:
+                    if (pessoas.isEmpty()) {
+                        System.out.println("Não existem pessoas cadastradas!");
+                        break;
+                    }
+                    System.out.println("Digite o código da pessoa que irá receber o automóvel:");
+                    int codigoPessoa = scanner.nextInt();
+                    scanner.nextLine(); 
+                    Pessoa pessoaDestino = null;
+                    for (Pessoa p : pessoas) {
+                        if (p.getCodigo() == codigoPessoa) {
+                            pessoaDestino = p;
+                            break;
+                        }
+                    }
+                    if (pessoaDestino == null) {
+                        System.out.println("Pessoa não encontrada!");
+                        break;
+                    }
+                    System.out.println("Digite a marca do automóvel:");
+                    String marca = scanner.nextLine();
+                    System.out.println("Digite o modelo do automóvel:");
+                    String modelo = scanner.nextLine();
+                    Automovel automovel = new Automovel(marca, modelo);
+                    pessoaDestino.inserirAutomovel(automovel);
+                    System.out.println("Automóvel adicionado à pessoa com sucesso!");
+                    break;
+                case 3:
+                    if (pessoas.isEmpty()) {
+                        System.out.println("Não existem pessoas cadastradas!");
+                        break;
+                    }
+                    System.out.println("Digite o código da pessoa que irá transferir o automóvel:");
+                    int codigoPessoaOrigem = scanner.nextInt();
+                    scanner.nextLine(); 
+                    Pessoa pessoaOrigem = null;
+                    for (Pessoa p : pessoas) {
+                        if (p.getCodigo() == codigoPessoaOrigem) {
+                            pessoaOrigem = p;
+                            break;
+                        }
+                    }
+                    if (pessoaOrigem == null) {
+                        System.out.println("Pessoa não encontrada!");
+                        break;
+                    }
+                    System.out.println("Selecione o automóvel a ser transferido:");
+                    ArrayList<Automovel> automoveisOrigem = pessoaOrigem.getAutomoveis();
+                    if (automoveisOrigem.isEmpty()) {
+                        System.out.println("Essa pessoa não possui automóveis cadastrados!");
+                        break;
+                    }
+                    for (int i = 0; i < automoveisOrigem.size(); i++) {
+                        System.out.println((i+1) + " - " + automoveisOrigem.get(i).imprimir());
+                    }
+                    int opcaoAutomovel = scanner.nextInt();
+                    scanner.nextLine(); 
+                    Automovel automovelOrigem = automoveisOrigem.get(opcaoAutomovel-1);
+                    System.out.println("Digite o código da pessoa que irá receber o automóvel:");
+                    int codigoPessoaDestino = scanner.nextInt();
+                    scanner.nextLine(); 
+                    Pessoa Pessoa = pessoaDestino = null;
+                    for (Pessoa p : pessoas) {
+                        if (p.getCodigo() == codigoPessoaDestino) {
+                            pessoaDestino = p;
+                            break;
+                        }
+                    }
+                    if (pessoaDestino == null) {
+                        System.out.println("Pessoa não encontrada!");
+                        break;
+                    }
+                    pessoaOrigem.removerAutomovel(opcaoAutomovel-1);
+                    pessoaDestino.inserirAutomovel(automovelOrigem);
+                    System.out.println("Automóvel transferido com sucesso!");
+                    break;
+
+                case 4:
+                    if (pessoas.isEmpty()) {
+                        System.out.println("Não existem pessoas cadastradas!");
+                        break;
+                    }
+                    for (Pessoa p : pessoas) {
+                        System.out.println(p.imprimir());
+                    }
+                    break;
+                case 5:
+                    if (pessoas.isEmpty()) {
+                        System.out.println("Não existem pessoas cadastradas!");
+                        break;
+                    }
+                    System.out.println("Digite o código da pessoa:");
+                    int codigoPessoa2 = scanner.nextInt();
+                    scanner.nextLine(); 
+                    Pessoa pessoa2 = null;
+                    for (Pessoa p : pessoas) {
+                        if (p.getCodigo() == codigoPessoa2) {
+                            pessoa2 = p;
+                            break;
+                        }
+                    }
+                    if (pessoa2 == null) {
+                        System.out.println("Pessoa não encontrada!");
+                        break;
+                    }
+                    ArrayList<Automovel> automoveis2 = pessoa2.getAutomoveis();
+                    if (automoveis2.isEmpty()) {
+                        System.out.println("Essa pessoa não possui automóveis cadastrados!");
+                        break;
+                    }
+                    for (Automovel a : automoveis2) {
+                        System.out.println(a.imprimir());
+                    }
+                    break;
+                case 6:
+                    System.out.println("Encerrando o programa...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
+        }
+    } while (opcao != 6);
+    
+    scanner.close();
+}
+}
