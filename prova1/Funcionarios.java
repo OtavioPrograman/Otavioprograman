@@ -44,7 +44,6 @@ public class Funcionario extends Pessoa {
 
     public void setBonificacao() {
         salario += salario * 0.1;
-        System.out.println("Salário com bonificação: " + salario);
     }
 
 }
